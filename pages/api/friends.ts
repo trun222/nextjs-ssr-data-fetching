@@ -1,12 +1,6 @@
-import faker from 'faker';
+import * as faker from 'faker';
 import type { NextApiRequest, NextApiResponse } from 'next'
-
-type Friend = {
-  name: string;
-  lastName: string;
-  email: string;
-  avatar: string;
-}
+import type Friend from '@/interfaces/friend.interface';
 
 type FriendsData = {
   friends: Friend[];
@@ -21,7 +15,7 @@ export default function handler(
       name: faker.name.firstName(),
       lastName: faker.name.lastName(),
       email: faker.internet.email(),
-      avatar: faker.image.avatar(),
+      avatar: faker.image.imageUrl(100, 100, 'avatars', true),
     }))
   });
 }
