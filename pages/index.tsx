@@ -16,7 +16,7 @@ const Home = ({ friends }: HomeProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col justify-start items-center h-screen p-20">
+      <main className="flex flex-col justify-start items-center h-screen p-20 bg-slate-200">
         <section className="h-1/3">
           <h1 className="text-5xl font-medium">
             Welcome{" "}
